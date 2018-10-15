@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merceria", "Merceria\Merceria.csproj", "{C33A8E01-23B3-4EED-9580-5FB594A22BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{2F062329-15D5-428A-8F64-63191EC19F9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\CapaNegocio.csproj", "{967719E8-B154-417D-97F4-4BF7D5728B35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C33A8E01-23B3-4EED-9580-5FB594A22BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33A8E01-23B3-4EED-9580-5FB594A22BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33A8E01-23B3-4EED-9580-5FB594A22BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33A8E01-23B3-4EED-9580-5FB594A22BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F062329-15D5-428A-8F64-63191EC19F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F062329-15D5-428A-8F64-63191EC19F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F062329-15D5-428A-8F64-63191EC19F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F062329-15D5-428A-8F64-63191EC19F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967719E8-B154-417D-97F4-4BF7D5728B35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967719E8-B154-417D-97F4-4BF7D5728B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967719E8-B154-417D-97F4-4BF7D5728B35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967719E8-B154-417D-97F4-4BF7D5728B35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C36C0EB-873E-41CE-A0E2-187AFA537663}
+	EndGlobalSection
+EndGlobal
