@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos.Entity;
+using CapaNegocio.Repositorios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +22,11 @@ namespace Merceria.Vistas.Ventas
         private void lblCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
         }
     }
 }
