@@ -17,6 +17,7 @@ namespace Merceria.Vistas.Ventas
         public frmVentasPrincipal()
         {
             InitializeComponent();
+            LlenardGVentas();
         }
 
         private void lblCerrar_Click(object sender, EventArgs e)
@@ -27,6 +28,12 @@ namespace Merceria.Vistas.Ventas
         
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+        }
+
+        private void LlenardGVentas()
+        {
+            RepoVentas repo = new RepoVentas();
+            dGVMostrarProductos.DataSource = repo.ConsultarProductos();
         }
     }
 }

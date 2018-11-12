@@ -31,7 +31,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dgvProductoVenta = new System.Windows.Forms.DataGridView();
+            this.dGVMostrarProductos = new System.Windows.Forms.DataGridView();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             this.lblIdProducto = new System.Windows.Forms.Label();
             this.lblIdV = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductoVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVMostrarProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,13 +88,14 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dgvProductoVenta
+            // dGVMostrarProductos
             // 
-            this.dgvProductoVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductoVenta.Location = new System.Drawing.Point(12, 102);
-            this.dgvProductoVenta.Name = "dgvProductoVenta";
-            this.dgvProductoVenta.Size = new System.Drawing.Size(489, 121);
-            this.dgvProductoVenta.TabIndex = 4;
+            this.dGVMostrarProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGVMostrarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVMostrarProductos.Location = new System.Drawing.Point(12, 102);
+            this.dGVMostrarProductos.Name = "dGVMostrarProductos";
+            this.dGVMostrarProductos.Size = new System.Drawing.Size(489, 121);
+            this.dGVMostrarProductos.TabIndex = 4;
             // 
             // txtNombre
             // 
@@ -334,14 +335,14 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dgvProductoVenta);
+            this.Controls.Add(this.dGVMostrarProductos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVentasPrincipal";
             this.Text = "frmVentasPrincipal";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductoVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVMostrarProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -352,7 +353,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dgvProductoVenta;
+        private System.Windows.Forms.DataGridView dGVMostrarProductos;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPrecio;
