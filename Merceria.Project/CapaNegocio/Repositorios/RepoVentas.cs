@@ -10,13 +10,13 @@ namespace CapaNegocio.Repositorios
 {
     public class RepoVentas
     {
-        public List<Productos> ConsultarProductos()
+        public List<Producto> ConsultarProductos()
         {
             try
             {
                 using (MerceriaContext db = new MerceriaContext())
                 {
-                    List<Productos> prod = db.Database.SqlQuery<Productos>("st_ConsultarProductos").ToList();
+                    List<Producto> prod = db.Database.SqlQuery<Producto>("st_ConsultarProductos").ToList();
                     return prod;
                 }
             }

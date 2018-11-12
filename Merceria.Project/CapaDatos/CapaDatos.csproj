@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection\MerceriaContext.cs" />
-    <Compile Include="Entity\Productos.cs" />
+    <Compile Include="Entity\Producto.cs" />
     <Compile Include="Entity\Tbl_Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

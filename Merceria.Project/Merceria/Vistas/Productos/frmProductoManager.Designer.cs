@@ -261,6 +261,7 @@
             this.btnAceptar.TabIndex = 23;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // frmProductoManager
             // 
@@ -301,8 +302,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblAccion;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label lblCategoria;
@@ -324,5 +323,6 @@
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        public System.Windows.Forms.Label lblAccion;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos.Entity;
+using CapaNegocio.Repositorios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +17,16 @@ namespace Merceria.Vistas.Productos
         public frmProductoPrincipal()
         {
             InitializeComponent();
+            ListarProductos();
         }
+
+        RepoProductos repo = new RepoProductos();
+
+        private void ListarProductos()
+        {
+            dgvProductos.DataSource = repo.ConsultarProductos();
+        }
+
 
         private void lblCerrar_Click(object sender, EventArgs e)
         {
@@ -26,6 +37,14 @@ namespace Merceria.Vistas.Productos
         {
             frmProductoManager obj = new frmProductoManager();
             obj.Show();
+            obj.lblAccion.Text = "Registro";
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Producto prod = new Producto();
+            prod.nombre = txtBuscar.Text;
+            dgvProductos.DataSource = repo.ConsultarProductoPorNombre(prod);
         }
     }
 }

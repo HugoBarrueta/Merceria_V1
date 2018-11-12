@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos.Entity;
+using CapaNegocio.Repositorios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +34,41 @@ namespace Merceria.Vistas.Productos
         {
             frmCategoriaProducto obj = new frmCategoriaProducto();
             obj.Show();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (lblAccion.Text == "Registro") { 
+                Producto prod = new Producto();
+                RepoProductos repo = new RepoProductos();
+
+                prod.codigo = txtCodigo.Text.Trim();
+                prod.nombre = txtNombre.Text.Trim();
+                prod.precioPublico = float.Parse(txtPrecPublico.Text.Trim());
+                prod.precioEntrada = float.Parse(txtPrecCosto.Text.Trim());
+                prod.stock = int.Parse(txtCantidad.Text.Trim());
+                prod.descripcion = txtDescripcion.Text.Trim();
+
+                if (MessageBox.Show("¿Desea guardar los cambios?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    repo.RegistrarProducto(prod);
+                    MessageBox.Show("Se ha guardado correctamente", "¡exitoso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarTextBox();
+                    this.Close();
+                }
+            }
+
+
+        }
+        
+        private void LimpiarTextBox()
+        {
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtPrecCosto.Clear();
+            txtPrecPublico.Clear();
+            txtStock.Clear();
+            txtDescripcion.Clear();
         }
     }
 }
