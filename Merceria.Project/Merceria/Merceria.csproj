@@ -125,7 +125,7 @@
     <Compile Include="Vistas\Ventas\frmVentasPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Ventas\frmVentasPrincipal.Designer.cs">
+    <Compile Include="Vistas\Ventas\frmVentasPrincipal.designer.cs">
       <DependentUpon>frmVentasPrincipal.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">

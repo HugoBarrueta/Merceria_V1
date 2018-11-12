@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio.Repositorios
 {
-    public class RepoProductos
-    {
+        public class RepoProductos
+        {
         public List<Producto> ConsultarProductos()
         {
             try
@@ -47,30 +47,30 @@ namespace CapaNegocio.Repositorios
         }
 
 
-            public void RegistrarProducto(Producto prod)
-        {
-            try
+        public void RegistrarProducto(Producto prod)
             {
-                string constr = ConfigurationManager.ConnectionStrings["MerceriaContext"].ConnectionString;
-                MerceriaContext db = new MerceriaContext();
-                string sqlComand = @"sp_InsertarProducto";
-                SqlConnection con = new SqlConnection(constr);
-                SqlCommand cmd = new SqlCommand(sqlComand, con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@cod", prod.codigo);
-                cmd.Parameters.AddWithValue("@nombre", prod.nombre);
-                cmd.Parameters.AddWithValue("@precEntrada", prod.precioEntrada);
-                cmd.Parameters.AddWithValue("@precPubl", prod.precioPublico);
-                cmd.Parameters.AddWithValue("@stock", prod.stock);
-                cmd.Parameters.AddWithValue("descr", prod.descripcion);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-            }
-            catch(Exception ex)
-            {
-                throw ex;
+                try
+                {
+                    string constr = ConfigurationManager.ConnectionStrings["MerceriaContext"].ConnectionString;
+                    MerceriaContext db = new MerceriaContext();
+                    string sqlComand = @"sp_InsertarProducto";
+                    SqlConnection con = new SqlConnection(constr);
+                    SqlCommand cmd = new SqlCommand(sqlComand, con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@cod", prod.codigo);
+                    cmd.Parameters.AddWithValue("@nombre", prod.nombre);
+                    cmd.Parameters.AddWithValue("@precEntrada", prod.precioEntrada);
+                    cmd.Parameters.AddWithValue("@precPubl", prod.precioPublico);
+                    cmd.Parameters.AddWithValue("@stock", prod.stock);
+                    cmd.Parameters.AddWithValue("descr", prod.descripcion);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
         }
     }
-}

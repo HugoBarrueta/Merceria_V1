@@ -2,6 +2,9 @@
 using CapaDatos.Entity;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,19 +13,59 @@ namespace CapaNegocio.Repositorios
 {
     public class RepoVentas
     {
-        public List<Producto> ConsultarProductos()
+        public List<Tbl_Productos> ConsultarProductos()
         {
             try
             {
                 using (MerceriaContext db = new MerceriaContext())
                 {
-                    List<Producto> prod = db.Database.SqlQuery<Producto>("st_ConsultarProductos").ToList();
+                    List<Tbl_Productos> prod = db.Database.SqlQuery<Tbl_Productos>("st_ConsultarProductos").ToList();
                     return prod;
                 }
             }
             catch (Exception ex)
             {
                 return null;
+            }
+        }
+
+        public List<Tbl_Productos> ConsultarProductosPorCodigo(Tbl_Productos pro)
+        {
+            try
+            {
+                using (MerceriaContext db = new MerceriaContext())
+                {
+                    List<Tbl_Productos> prod = db.Database.SqlQuery<Tbl_Productos>("st_ConsultarProductoPorCodigo @codigo",
+                        new SqlParameter("@codigo", pro.codigo)).ToList();
+                    return prod;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public void RegistrarVenta(Tbl_Venta vent)
+        {
+            try
+            {
+                string constr = ConfigurationManager.ConnectionStrings["MerceriaContext"].ConnectionString;
+                MerceriaContext db = new MerceriaContext();
+                string sqlComand = @"st_RegistrarVenta";
+                SqlConnection con = new SqlConnection(constr);
+                SqlCommand cmd = new SqlCommand(sqlComand, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idCliente", vent.idCliente);
+                cmd.Parameters.AddWithValue("@totalVenta", vent.totalVenta);
+                cmd.Parameters.AddWithValue("@fechaVenta", vent.fechaVenta);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                return;
             }
         }
     }
