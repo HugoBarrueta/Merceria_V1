@@ -29,6 +29,23 @@ namespace CapaNegocio.Repositorios
             }
         }
 
+        public List<Tbl_Categoria> ListarCategoria()
+        {
+            try
+            {
+                using(MerceriaContext db = new MerceriaContext())
+                {
+                    List<Tbl_Categoria> prod = db.Database.SqlQuery<Tbl_Categoria>("sp_ListarCategoria").ToList();
+                    return prod;
+                }
+
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
+        }
+
         public List<Producto> ConsultarProductoPorNombre(Producto prod)
         {
             using (MerceriaContext db = new MerceriaContext())

@@ -120,17 +120,14 @@ namespace Merceria.Vistas.Inicio
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            pnlMarca.Location = btnPedidos.Location;
         }
 
         private void btnRentas_Click(object sender, EventArgs e)
         {
-            pnlMarca.Location = btnRentas.Location;
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            pnlMarca.Location = btnReportes.Location;
         }
 
         private void pnlMenuSuperior_MouseDown(object sender, MouseEventArgs e)

@@ -33,10 +33,7 @@
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblCerrar = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.btnRentas = new System.Windows.Forms.Button();
             this.pnlMarca = new System.Windows.Forms.Panel();
-            this.btnPedidos = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
@@ -81,10 +78,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.MediumOrchid;
-            this.pnlMenu.Controls.Add(this.btnReportes);
-            this.pnlMenu.Controls.Add(this.btnRentas);
             this.pnlMenu.Controls.Add(this.pnlMarca);
-            this.pnlMenu.Controls.Add(this.btnPedidos);
             this.pnlMenu.Controls.Add(this.btnVentas);
             this.pnlMenu.Controls.Add(this.btnClientes);
             this.pnlMenu.Controls.Add(this.btnEmpleados);
@@ -96,36 +90,6 @@
             this.pnlMenu.Size = new System.Drawing.Size(210, 600);
             this.pnlMenu.TabIndex = 14;
             // 
-            // btnReportes
-            // 
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Location = new System.Drawing.Point(0, 490);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(210, 50);
-            this.btnReportes.TabIndex = 8;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
-            // 
-            // btnRentas
-            // 
-            this.btnRentas.FlatAppearance.BorderSize = 0;
-            this.btnRentas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnRentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRentas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRentas.Location = new System.Drawing.Point(0, 434);
-            this.btnRentas.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.btnRentas.Name = "btnRentas";
-            this.btnRentas.Size = new System.Drawing.Size(210, 52);
-            this.btnRentas.TabIndex = 7;
-            this.btnRentas.Text = "Rentas";
-            this.btnRentas.UseVisualStyleBackColor = true;
-            this.btnRentas.Click += new System.EventHandler(this.btnRentas_Click);
-            // 
             // pnlMarca
             // 
             this.pnlMarca.BackColor = System.Drawing.Color.BlueViolet;
@@ -133,21 +97,6 @@
             this.pnlMarca.Name = "pnlMarca";
             this.pnlMarca.Size = new System.Drawing.Size(15, 50);
             this.pnlMarca.TabIndex = 0;
-            // 
-            // btnPedidos
-            // 
-            this.btnPedidos.FlatAppearance.BorderSize = 0;
-            this.btnPedidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedidos.Location = new System.Drawing.Point(0, 381);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(210, 50);
-            this.btnPedidos.TabIndex = 6;
-            this.btnPedidos.Text = "Pedidos";
-            this.btnPedidos.UseVisualStyleBackColor = true;
-            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // btnVentas
             // 
@@ -322,7 +271,6 @@
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Label lblCerrar;
         private System.Windows.Forms.Panel pnlMenu;
-        private System.Windows.Forms.Button btnPedidos;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnEmpleados;
@@ -334,8 +282,6 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Button btnRentas;
         private System.Windows.Forms.Timer horaFecha;
         public System.Windows.Forms.Panel pnlMarca;
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos.Entity;
+using CapaNegocio.Repositorios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,12 +17,22 @@ namespace Merceria.Vistas.Empleado
         public frmEmpleadoPrincipal()
         {
             InitializeComponent();
+            ListarUsuarios();
         }
+
+        RepoUsuarios repo = new RepoUsuarios();
+
+        private void ListarUsuarios()
+        {
+            dgvEmpleado.DataSource = repo.ConsultarUsuarios();
+        }
+
 
         private void btnNuevoEmpleado_Click(object sender, EventArgs e)
         {
             frmEmpleadoManager obj = new frmEmpleadoManager();
             obj.Show();
+            obj.lblAccion.Text = "Registro";
         }
     }
 }

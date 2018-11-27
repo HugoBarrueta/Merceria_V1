@@ -17,6 +17,14 @@ namespace Merceria.Vistas.Productos
         public frmProductoManager()
         {
             InitializeComponent();
+            ListarCategoria();
+        }
+         private void ListarCategoria()
+        {
+            RepoProductos repo = new RepoProductos();
+            cmbCategoria.DataSource = repo.ListarCategoria();
+            cmbCategoria.DisplayMember = "valor";
+            cmbCategoria.ValueMember = "id";
         }
 
         private void frmProductoManager_Load(object sender, EventArgs e)

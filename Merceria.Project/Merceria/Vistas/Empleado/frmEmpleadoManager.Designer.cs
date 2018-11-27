@@ -35,14 +35,12 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
-            this.lblFecNac = new System.Windows.Forms.Label();
+            this.lblClular = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
-            this.lblTelefono = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAPaterno = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
@@ -50,7 +48,10 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtAMaterno = new System.Windows.Forms.TextBox();
             this.lblAMaterno = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -63,6 +64,7 @@
             this.btnAceptar.TabIndex = 45;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -126,35 +128,25 @@
             this.lblSexo.TabIndex = 28;
             this.lblSexo.Text = "Sexo: ";
             // 
-            // lblFecNac
+            // lblClular
             // 
-            this.lblFecNac.AutoSize = true;
-            this.lblFecNac.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecNac.Location = new System.Drawing.Point(0, 240);
-            this.lblFecNac.Name = "lblFecNac";
-            this.lblFecNac.Size = new System.Drawing.Size(135, 17);
-            this.lblFecNac.TabIndex = 29;
-            this.lblFecNac.Text = "Fecha Nacimiento: ";
+            this.lblClular.AutoSize = true;
+            this.lblClular.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClular.Location = new System.Drawing.Point(72, 240);
+            this.lblClular.Name = "lblClular";
+            this.lblClular.Size = new System.Drawing.Size(62, 17);
+            this.lblClular.TabIndex = 29;
+            this.lblClular.Text = "Celular: ";
             // 
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(58, 270);
+            this.lblDireccion.Location = new System.Drawing.Point(58, 299);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(77, 17);
             this.lblDireccion.TabIndex = 30;
             this.lblDireccion.Text = "Dirección: ";
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(65, 300);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(70, 17);
-            this.lblTelefono.TabIndex = 31;
-            this.lblTelefono.Text = "Telefono: ";
             // 
             // lblPass
             // 
@@ -166,37 +158,29 @@
             this.lblPass.TabIndex = 32;
             this.lblPass.Text = "Contraseña: ";
             // 
-            // textBox1
+            // txtAPaterno
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.textBox1.Location = new System.Drawing.Point(143, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 24);
-            this.textBox1.TabIndex = 33;
+            this.txtAPaterno.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.txtAPaterno.Location = new System.Drawing.Point(143, 111);
+            this.txtAPaterno.Name = "txtAPaterno";
+            this.txtAPaterno.Size = new System.Drawing.Size(200, 24);
+            this.txtAPaterno.TabIndex = 33;
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.textBox2.Location = new System.Drawing.Point(143, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 24);
-            this.textBox2.TabIndex = 34;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.txtNombre.Location = new System.Drawing.Point(143, 80);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(200, 24);
+            this.txtNombre.TabIndex = 34;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.txtDireccion.Location = new System.Drawing.Point(143, 269);
+            this.txtDireccion.Location = new System.Drawing.Point(143, 298);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(200, 24);
             this.txtDireccion.TabIndex = 36;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.textBox7.Location = new System.Drawing.Point(143, 300);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(200, 24);
-            this.textBox7.TabIndex = 37;
             // 
             // txtPass
             // 
@@ -260,20 +244,49 @@
             this.lblAMaterno.TabIndex = 47;
             this.lblAMaterno.Text = "Apellido Materno: ";
             // 
-            // dateTimePicker1
+            // txtCargo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(143, 240);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 48;
+            this.txtCargo.Location = new System.Drawing.Point(348, 174);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(44, 20);
+            this.txtCargo.TabIndex = 49;
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(143, 236);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(200, 27);
+            this.txtCelular.TabIndex = 50;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.txtTelefono.Location = new System.Drawing.Point(143, 269);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(200, 24);
+            this.txtTelefono.TabIndex = 52;
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(65, 269);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(70, 17);
+            this.lblTelefono.TabIndex = 51;
+            this.lblTelefono.Text = "Telefono: ";
             // 
             // frmEmpleadoManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(395, 480);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(412, 480);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.lblAMaterno);
             this.Controls.Add(this.txtAMaterno);
             this.Controls.Add(this.btnAceptar);
@@ -283,14 +296,12 @@
             this.Controls.Add(this.cmbSexo);
             this.Controls.Add(this.cmbCargo);
             this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtAPaterno);
             this.Controls.Add(this.lblPass);
-            this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblDireccion);
-            this.Controls.Add(this.lblFecNac);
+            this.Controls.Add(this.lblClular);
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.lblnombre);
@@ -310,19 +321,16 @@
 
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label lblAccion;
         private System.Windows.Forms.Label lblAPaterno;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.Label lblFecNac;
+        private System.Windows.Forms.Label lblClular;
         private System.Windows.Forms.Label lblDireccion;
-        private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblPass;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAPaterno;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.ComboBox cmbCargo;
         private System.Windows.Forms.ComboBox cmbSexo;
@@ -330,6 +338,10 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtAMaterno;
         private System.Windows.Forms.Label lblAMaterno;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.Label lblAccion;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox txtCelular;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.Label lblTelefono;
     }
 }

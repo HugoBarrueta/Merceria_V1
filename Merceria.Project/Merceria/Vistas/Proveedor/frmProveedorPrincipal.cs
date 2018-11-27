@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos.Entity;
+using CapaNegocio.Repositorios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,12 @@ namespace Merceria.Vistas.Proveedor
         public frmProveedorPrincipal()
         {
             InitializeComponent();
+            ListarProveedor();
+        }
+        RepoProveedor repo = new RepoProveedor();
+        private void ListarProveedor()
+        {
+            dgvProveedor.DataSource = repo.ConsultarProveedores();
         }
 
         private void lblCerrar_Click(object sender, EventArgs e)
@@ -26,6 +34,7 @@ namespace Merceria.Vistas.Proveedor
         {
             frmProveedorManager obj = new frmProveedorManager();
             obj.Show();
+            obj.lblAccion.Text = "Registro";
         }
     }
 }

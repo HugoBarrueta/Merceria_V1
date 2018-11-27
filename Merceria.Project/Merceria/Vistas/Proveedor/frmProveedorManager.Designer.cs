@@ -32,9 +32,9 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -79,29 +79,29 @@
             this.lblTelefono.TabIndex = 3;
             this.lblTelefono.Text = "Telefono: ";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(122, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 26);
-            this.textBox1.TabIndex = 4;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(122, 73);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(165, 26);
+            this.txtNombre.TabIndex = 4;
             // 
-            // textBox2
+            // txtDireccion
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(121, 111);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 26);
-            this.textBox2.TabIndex = 5;
+            this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(121, 111);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(166, 26);
+            this.txtDireccion.TabIndex = 5;
             // 
-            // textBox3
+            // txtTelefono
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(121, 149);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 26);
-            this.textBox3.TabIndex = 6;
+            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(121, 149);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(166, 26);
+            this.txtTelefono.TabIndex = 6;
             // 
             // btnCancelar
             // 
@@ -125,6 +125,7 @@
             this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // frmProveedorManager
             // 
@@ -134,9 +135,9 @@
             this.ClientSize = new System.Drawing.Size(329, 295);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblDireccion);
             this.Controls.Add(this.lblNombre);
@@ -151,15 +152,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblAccion;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        public System.Windows.Forms.Label lblAccion;
     }
 }
