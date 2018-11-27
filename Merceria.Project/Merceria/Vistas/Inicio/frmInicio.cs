@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using Merceria.Vistas.Productos;
 using Merceria.Vistas.Proveedor;
 using Merceria.Vistas.Empleado;
-using Merceria.Vistas.Clientes;
 using Merceria.Vistas.Ventas;
 
 namespace Merceria.Vistas.Inicio
@@ -108,7 +107,6 @@ namespace Merceria.Vistas.Inicio
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            setForm(new frmClientePrincipal());
             pnlMarca.Location = btnClientes.Location;
         }
 

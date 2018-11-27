@@ -54,10 +54,9 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCalcularTotal = new System.Windows.Forms.Button();
             this.lblCerrar = new System.Windows.Forms.Label();
-            this.lblIdProducto = new System.Windows.Forms.Label();
-            this.lblIdV = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.lblP = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbClientes = new System.Windows.Forms.ComboBox();
             this.dTPFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dGVMostrarProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
@@ -80,6 +79,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(151, 23);
             this.txtBuscar.TabIndex = 2;
+            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
             // 
             // btnBuscar
             // 
@@ -168,6 +168,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(157, 23);
             this.txtCantidad.TabIndex = 12;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label6
             // 
@@ -321,25 +322,24 @@
             this.lblCerrar.Text = "X";
             this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
             // 
-            // lblIdProducto
+            // lblCantidad
             // 
-            this.lblIdProducto.AutoSize = true;
-            this.lblIdProducto.Location = new System.Drawing.Point(529, 17);
-            this.lblIdProducto.Name = "lblIdProducto";
-            this.lblIdProducto.Size = new System.Drawing.Size(22, 13);
-            this.lblIdProducto.TabIndex = 24;
-            this.lblIdProducto.Text = "idP";
-            this.lblIdProducto.Visible = false;
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(529, 17);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(49, 13);
+            this.lblCantidad.TabIndex = 24;
+            this.lblCantidad.Text = "Cantidad";
+            this.lblCantidad.Visible = false;
             // 
-            // lblIdV
+            // lblP
             // 
-            this.lblIdV.AutoSize = true;
-            this.lblIdV.Location = new System.Drawing.Point(501, 17);
-            this.lblIdV.Name = "lblIdV";
-            this.lblIdV.Size = new System.Drawing.Size(22, 13);
-            this.lblIdV.TabIndex = 25;
-            this.lblIdV.Text = "idV";
-            this.lblIdV.Visible = false;
+            this.lblP.AutoSize = true;
+            this.lblP.Location = new System.Drawing.Point(501, 17);
+            this.lblP.Name = "lblP";
+            this.lblP.Size = new System.Drawing.Size(22, 13);
+            this.lblP.TabIndex = 25;
+            this.lblP.Text = "idP";
             // 
             // label1
             // 
@@ -350,15 +350,6 @@
             this.label1.Size = new System.Drawing.Size(73, 23);
             this.label1.TabIndex = 26;
             this.label1.Text = "Ventas";
-            // 
-            // cmbClientes
-            // 
-            this.cmbClientes.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.cmbClientes.FormattingEnabled = true;
-            this.cmbClientes.Location = new System.Drawing.Point(336, 65);
-            this.cmbClientes.Name = "cmbClientes";
-            this.cmbClientes.Size = new System.Drawing.Size(165, 25);
-            this.cmbClientes.TabIndex = 27;
             // 
             // dTPFecha
             // 
@@ -374,10 +365,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dTPFecha);
-            this.Controls.Add(this.cmbClientes);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblIdV);
-            this.Controls.Add(this.lblIdProducto);
+            this.Controls.Add(this.lblP);
+            this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblCerrar);
             this.Controls.Add(this.btnCalcularTotal);
             this.Controls.Add(this.btnAceptar);
@@ -435,13 +425,12 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCalcularTotal;
         private System.Windows.Forms.Label lblCerrar;
-        private System.Windows.Forms.Label lblIdProducto;
-        private System.Windows.Forms.Label lblIdV;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Label lblP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.ComboBox cmbClientes;
         private System.Windows.Forms.DateTimePicker dTPFecha;
     }
 }

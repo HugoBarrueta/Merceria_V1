@@ -11,8 +11,6 @@ namespace CapaDatos.Entity
     {
         [Key]
         public int id { get; set; }
-        public int idUsuario { get; set; }
-        public int idCliente { get; set; }
         public decimal totalVenta { get; set; }
         public DateTime fechaVenta { get; set; }
     }
